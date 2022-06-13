@@ -1,0 +1,717 @@
+@font-face {
+    font-family: 'space_monoregular';
+    src: url('fonts/spacemono-regular-webfont.woff2') format('woff2'),
+         url('fonts/spacemono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bespokeek9gnkqnmi';
+    src: url('fonts/bespoke-ek9gnkqnmi-webfont.woff2') format('woff2'),
+         url('fonts/bespoke-ek9gnkqnmi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    margin: 0px;
+    width: 100vw;
+    min-height: 100vh;
+    text-rendering: geometricPrecision;
+}
+
+@media  screen and (max-width: 929px) {
+    .header {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 930px){
+
+    /* HEADER */
+    .header {
+        width: 100%;
+        height: 50vh;
+    
+        position: relative;
+        z-index: 0;
+    }
+    
+    .navbar {
+        width: 100%;
+        height: 35.44%;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        z-index: 1;
+    }
+    
+    .title {
+        width: 66.66%;
+        height: 100%;
+    }
+    
+    .title h1 {
+        margin: 20px; 
+        line-height: 105%;
+        font-family: space_monoregular;
+        font-size: 30px;
+        font-weight: 100;
+    }
+    
+    .navElements {
+        width: 33.33%;
+        height: 100%;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    .navElements h2 {
+        margin-top: 16px;
+        margin-right: 33px;
+        font-family: bespokeek9gnkqnmi;
+        font-size: 22.4px;
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+        color: red;
+        font-weight: 100;
+    }
+    
+    .algospeak {
+        position: fixed;
+        top: 10%; 
+    
+        width: 100%;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+        z-index: -1;
+    }
+
+    .algospeak img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 929px) {
+    main {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 930px) {
+
+    /* MAIN */
+    .boxGross {
+        width: 100%;
+
+        position: relative;
+
+        top: 50%;
+
+        z-index: 2;
+    }
+
+    .boxMittel {
+        width: 78.68%;
+        
+        margin: auto;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .boxDreimal {
+        width: 31.51%;
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .button {
+        --height-width-rel: calc(115/450);
+        --width-rel: calc(100vw * 0.247);
+        height: calc(var(--height-width-rel) * var(--width-rel));
+
+        width: calc(100% - 2px);
+        background-color: white;
+
+        border: 1px solid; 
+        border-radius: 30px;
+
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        --boxMittel-width: calc(100vw * 0.79);
+        margin-bottom: calc((var(--boxMittel-width) - 3 * var(--width-rel)) / 2);
+
+        font-family: space_monoregular;
+        font-size: 15px;
+        text-align: center;
+        cursor: pointer;
+
+    }
+
+    .blackButton {
+       
+        background-color: black;
+        color: white;
+    }
+
+   .button:hover {
+        border-color: black;
+        box-shadow: 5px 5px 5px 1px #00000085;
+      }
+}
+
+@media screen and (min-width: 930px) {
+
+    /* POP UPS 
+ERROR */
+.boxrahmen {
+    width: 66vw;
+    height: 63vh;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: red;
+    border-radius: 30px;
+
+    z-index: 3;
+
+    box-shadow: 5px 5px 5px 1px #00000085;
+    
+
+}
+
+.rahmenMittig {
+    position: relative;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 30px;
+
+}
+
+.textError {
+    height: 82.7%;
+    font-family: space_monoregular;
+    font-size: 50px;
+    line-height: 100%;
+   
+}
+
+.buttonbox {
+    --height-width-rel: calc(115/450);
+    --width-rel: calc(100vw * 0.247);
+    height: calc(var(--height-width-rel) * var(--width-rel));
+
+   display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+   
+}
+
+.generalbutton {
+    height: calc(100% - 2px);
+    width: calc(100vw * 0.7868 * 0.3151);
+
+    border: 1px solid; 
+    border-radius: 30px;
+   
+    font-family: space_monoregular;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.generalbutton:hover {
+    border-color: black;
+    box-shadow: 5px 5px 5px 1px #00000085;
+  }
+
+.generalbutton p {
+    height: 100%;
+}
+
+
+
+/* POP UPS 
+COOKIES */
+.boxrahmen2 {
+    width: 66vw;
+    height: 63vh;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: red;
+    border-radius: 30px;
+
+    z-index: 3;
+
+    box-shadow: 5px 5px 5px 1px #00000085;
+
+}
+
+.rahmenMittig2 {
+    position: relative;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 30px;
+
+}
+
+.textCookies {
+    height: 82.7%;
+    font-family: space_monoregular;
+    font-size: 20px;
+    line-height: 115%;
+   
+}
+
+
+/* POP UPS 
+BUTTONS */
+.boxrahmen3 {
+    width: 66vw;
+    height: 63vh;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: red;
+    border-radius: 30px;
+
+    z-index: 3;
+
+    box-shadow: 5px 5px 5px 1px #00000085;
+    
+
+}
+
+.rahmenMittig3 {
+    position: relative;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+
+    margin: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+}
+
+
+@media screen and (min-width: 930px) {
+
+/*  POP UPS 
+ADS VIBRATOR */ 
+.vordergrundBox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+}
+.adsrahmen {
+    position: fixed;
+    width: 19vw;
+
+    top: 4vh;
+    left: 4vw;
+
+    z-index: 7;
+}
+
+.adsrahmen img {
+    width: 100%;
+}
+
+.ellipse {
+    position: absolute;
+    top: 19vh;
+    left: 5vw;
+
+    background-color: red;
+    height: 80px;
+    width: 150px;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.preis {
+    bottom: 10px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: space_monoregular;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.adsrahmen2 {
+    position: fixed;
+    width: 19vw;
+
+    top: 22vh;
+    left: 20vw;
+
+    z-index: 7;
+}
+
+.adsrahmen2 img {
+    max-width: 100%;
+    
+}
+
+.adsrahmen3 {
+    position: fixed;
+    width: 19vw;
+
+    top: 4vh;
+    left: 40vw;
+
+    z-index: 7;
+}
+
+.adsrahmen3 img {
+    max-width: 100%;
+    
+}
+
+.adsrahmen4 {
+    position: fixed;
+    width: 19vw;
+
+    top: 22vh;
+    left: 60vw;
+
+    z-index: 7;
+}
+
+.adsrahmen4 img {
+    max-width: 100%;
+    
+}
+
+.adsrahmen5 {
+    position: fixed;
+    width: 19vw;
+
+    top: 4vh;
+    right: 4vw;
+
+    z-index: 7;
+}
+
+.adsrahmen5 img {
+    max-width: 100%;
+    
+}
+
+.adsrahmen6 {
+    position: fixed;
+    width: 19vw;
+
+    top: 40vh;
+    left: 4vw;
+
+    z-index: 7;
+}
+
+.adsrahmen6 img {
+    max-width: 100%;
+    
+}
+
+.adsrahmen7 {
+    position: fixed;
+    width: 19vw;
+
+    top: 60vh;
+    left: 24vw;
+
+    z-index: 7;
+}
+
+.adsrahmen7 img {
+    max-width: 100%;
+    
+}
+
+.adsrahmen8 {
+    position: fixed;
+    width: 19vw;
+
+    top: 40vh;
+    left: 45vw;
+
+    z-index: 7;
+}
+
+.adsrahmen8 img {
+    max-width: 100%;
+    
+}
+
+.adsrahmen9 {
+    position: fixed;
+    width: 19vw;
+
+    top: 60vh;
+    left: 60vw;
+
+    z-index: 7;
+}
+
+.adsrahmen9 img {
+    max-width: 100%;
+    
+}
+
+.adsrahmen10 {
+    position: fixed;
+    width: 19vw;
+
+    top: 40vh;
+    right: 4vw;
+
+    z-index: 7;
+}
+
+.adsrahmen10 img {
+    max-width: 100%;
+    
+}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 930px) {
+    /* POP UPS 
+CONDOMS */
+.adsrahmenCondoms {
+    position: fixed;
+    width: 507px;
+    height: 488px;
+    
+    top: 52%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+
+    z-index: 8;
+    
+}
+
+
+.condom {
+    width: 100%;
+    height: 100%;
+
+}
+
+.stoerer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    top: -44%;
+    left: 35%;
+    transform: rotate(12deg);
+}
+
+}
+
+
+
+/* POP UPS 
+BUECHER 
+
+.adsrahmenBuch {
+    position: fixed;
+    width: 225px;
+    height: 235px;
+
+    top: 50px;
+    left: 50px;
+
+    z-index: 7;
+    display: none;
+}
+
+.adsrahmenBuch img {
+    width: 100%;
+    height: 100%;
+}
+*/
+
+
+@media screen and (min-width: 930px) {
+
+/* ABOUT */
+.boxrahmenweiß {
+    width: 66vw;
+    height: 63vh;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid;
+    z-index: 2;
+    box-shadow: 5px 5px 5px 1px #00000085;
+}
+
+.boxrahmenweißMittig {
+    position: relative;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+
+    margin: 30px;
+    overflow: scroll;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.textAbout {
+    font-family: space_monoregular;
+    font-size: 20px;
+    line-height: 115%;
+}
+
+span {
+    font-weight: bold;
+}
+
+}
+
+
+
+
+@media screen and (min-width: 930px) {
+    
+/* START */
+.boxrahmenStart {
+    width: 66vw;
+    height: 63vh;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid;
+
+    z-index: 10;
+
+    box-shadow: 5px 5px 5px 1px #00000085;
+    
+}
+
+.boxrahmenStartMittig {
+    position: relative;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    margin: 30px;
+
+}
+
+.textStart {
+    height: 82.7%;
+    font-family: space_monoregular;
+    font-size: 20px;
+    line-height: 115%;
+   
+}
+
+/* POPUP CENSOR */
+.boxCensor {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+    z-index: 30;
+}
+
+}
+
+.pointer2 {
+    width: 12px;
+    position: absolute;
+    z-index: 100;
+}
+
+

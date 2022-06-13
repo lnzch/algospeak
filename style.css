@@ -67,6 +67,7 @@ body {
         font-family: space_monoregular;
         font-size: 30px;
         font-weight: 100;
+        cursor: default;
     }
     
     .navElements {
@@ -87,6 +88,7 @@ body {
         -webkit-filter: blur(1px);
         color: red;
         font-weight: 100;
+        cursor: pointer;
     }
     
     .algospeak {
